@@ -57,11 +57,11 @@ class ViewController: UIViewController {
     }
 
     private func updateScoreUI(forPlayer player: Player) {
-        updateMatchScore(forPlayer: player)
+        updateAllSetsScore(forPlayer: player)
         updateGameScore(forPlayer: player)
     }
 
-    private func updateMatchScore(forPlayer player: Player) {
+    private func updateAllSetsScore(forPlayer player: Player) {
         for i in 0..<6 {
             if i < match.sets.count {
                 let set = match.sets[i]
