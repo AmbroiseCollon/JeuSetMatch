@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TennisScore.xcodeproj">
+      location = "self:/Users/ambroisecollon/Desktop/TennisScore/Jeu Set &amp; Match.xcodeproj">
    </FileRef>
 </Workspace>
