@@ -16,25 +16,27 @@ enum Player {
 }
 
 class Game {
-    // MARK: - Subtype points
-    enum Points: Int {
-        case zero = 0
-        case fifteen = 15
-        case thirty = 30
-        case forty = 40
-
-        static let values: [Points] = [.zero, .fifteen, .thirty, .forty]
-    }
 
     // MARK: - Properties
-    var scores = [Player.one: Points.zero, Player.two: Points.zero]
+    private static let points = [0, 15, 30, 40]
+    var scores = [Player.one: 0, Player.two: 0]
     var winner: Player?
+    var isOver: Bool {
+        return winner != nil
+    }
 
     // MARK: - Methods
     func incrementScore(forPlayer player: Player) {
-        if let score = scores[player], score != .forty,
-            let scoreIndex = Game.Points.values.index(of: score) {
-            scores[player] = Game.Points.values[scoreIndex + 1]
+        if let score = scores[player], let scoreIndex = Game.points.index(of: score) {
+            if score < 30 {
+                scores[player] = Game.points[scoreIndex + 1]
+            } else {
+                end(withWinner: player)
+            }
         }
+    }
+
+    private func end(withWinner winner: Player) {
+        self.winner = winner
     }
 }

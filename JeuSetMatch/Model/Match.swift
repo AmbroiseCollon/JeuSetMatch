@@ -32,12 +32,14 @@ class Match {
         return sets.last!
     }
 
+    static let maxNumberOfWonSets = 3
+
     // MARK: - Private Getters
     private func getWinner() -> Player? {
-        if scores[.one] == 3 {
-            return .one
-        } else if scores[.two] == 3 {
-            return .two
+        for (player, score) in scores {
+            if score == Match.maxNumberOfWonSets {
+                return player
+            }
         }
         return nil
     }
@@ -55,23 +57,19 @@ class Match {
 
     // MARK: - Methods
     func pointEnded(wonBy player: Player) {
-        if !isOver, let score = currentGame.scores[player] {
-            if score == Game.Points.forty {
-                endCurrentGame(wonBy: player)
-            } else {
-                currentGame.incrementScore(forPlayer: player)
+        if !isOver {
+            currentGame.incrementScore(forPlayer: player)
+            if currentGame.isOver {
+                endCurrentGame()
             }
         }
     }
 
-    private func endCurrentGame(wonBy player: Player) {
-        currentGame.winner = player
+    private func endCurrentGame() {
         if currentSet.isOver {
-            if !isOver {
-                addNewSetToMatch()
-            }
+            addNewSetToMatch()
         } else {
-	        addNewGameToCurrentSet()
+            addNewGameToCurrentSet()
         }
     }
 

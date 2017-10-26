@@ -15,21 +15,10 @@
 		C97F5FEB1F98D7DD00FAF023 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F5FEA1F98D7DD00FAF023 /* Match.swift */; };
 		C97F5FED1F98D80100FAF023 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F5FEC1F98D80100FAF023 /* Set.swift */; };
 		C985A5E51F8F7AD200DBC442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C985A5E41F8F7AD200DBC442 /* Assets.xcassets */; };
-		C9F338881F98EEE300693152 /* GameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F338871F98EEE300693152 /* GameTestCase.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C9AB602D1F98EDD6008D17F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C90292951F8D0500003E6B8B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C902929C1F8D0500003E6B8B;
-			remoteInfo = "Jeu Set & Match";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		C902929D1F8D0500003E6B8B /* Jeu Set & Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jeu Set & Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C902929D1F8D0500003E6B8B /* JeuSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeuSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90292A01F8D0500003E6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C90292A21F8D0500003E6B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C90292A51F8D0500003E6B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,20 +28,10 @@
 		C97F5FEA1F98D7DD00FAF023 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		C97F5FEC1F98D80100FAF023 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		C985A5E41F8F7AD200DBC442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9AB60281F98EDD6008D17F1 /* Jeu Set & MatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jeu Set & MatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9AB602C1F98EDD6008D17F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9F338871F98EEE300693152 /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C902929A1F8D0500003E6B8B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9AB60251F98EDD6008D17F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,8 +44,7 @@
 		C90292941F8D0500003E6B8B = {
 			isa = PBXGroup;
 			children = (
-				C902929F1F8D0500003E6B8B /* Jeu Set & Match */,
-				C9AB60291F98EDD6008D17F1 /* Jeu Set & MatchTests */,
+				C902929F1F8D0500003E6B8B /* JeuSetMatch */,
 				C902929E1F8D0500003E6B8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,13 +52,12 @@
 		C902929E1F8D0500003E6B8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C902929D1F8D0500003E6B8B /* Jeu Set & Match.app */,
-				C9AB60281F98EDD6008D17F1 /* Jeu Set & MatchTests.xctest */,
+				C902929D1F8D0500003E6B8B /* JeuSetMatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C902929F1F8D0500003E6B8B /* Jeu Set & Match */ = {
+		C902929F1F8D0500003E6B8B /* JeuSetMatch */ = {
 			isa = PBXGroup;
 			children = (
 				C90292B41F8D051A003E6B8B /* Supporting Files */,
@@ -88,7 +65,7 @@
 				C97F5FF01F98D83D00FAF023 /* View */,
 				C97F5FEF1F98D82600FAF023 /* Controller */,
 			);
-			path = "Jeu Set & Match";
+			path = JeuSetMatch;
 			sourceTree = "<group>";
 		};
 		C90292B41F8D051A003E6B8B /* Supporting Files */ = {
@@ -128,21 +105,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C9AB60291F98EDD6008D17F1 /* Jeu Set & MatchTests */ = {
-			isa = PBXGroup;
-			children = (
-				C9F338871F98EEE300693152 /* GameTestCase.swift */,
-				C9AB602C1F98EDD6008D17F1 /* Info.plist */,
-			);
-			path = "Jeu Set & MatchTests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C902929C1F8D0500003E6B8B /* Jeu Set & Match */ = {
+		C902929C1F8D0500003E6B8B /* JeuSetMatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C90292AF1F8D0500003E6B8B /* Build configuration list for PBXNativeTarget "Jeu Set & Match" */;
+			buildConfigurationList = C90292AF1F8D0500003E6B8B /* Build configuration list for PBXNativeTarget "JeuSetMatch" */;
 			buildPhases = (
 				C90292991F8D0500003E6B8B /* Sources */,
 				C902929A1F8D0500003E6B8B /* Frameworks */,
@@ -152,28 +120,10 @@
 			);
 			dependencies = (
 			);
-			name = "Jeu Set & Match";
+			name = JeuSetMatch;
 			productName = TennisScore;
-			productReference = C902929D1F8D0500003E6B8B /* Jeu Set & Match.app */;
+			productReference = C902929D1F8D0500003E6B8B /* JeuSetMatch.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C9AB60271F98EDD6008D17F1 /* Jeu Set & MatchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9AB60311F98EDD6008D17F1 /* Build configuration list for PBXNativeTarget "Jeu Set & MatchTests" */;
-			buildPhases = (
-				C9AB60241F98EDD6008D17F1 /* Sources */,
-				C9AB60251F98EDD6008D17F1 /* Frameworks */,
-				C9AB60261F98EDD6008D17F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9AB602E1F98EDD6008D17F1 /* PBXTargetDependency */,
-			);
-			name = "Jeu Set & MatchTests";
-			productName = "Jeu Set & MatchTests";
-			productReference = C9AB60281F98EDD6008D17F1 /* Jeu Set & MatchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,14 +139,9 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					C9AB60271F98EDD6008D17F1 = {
-						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C902929C1F8D0500003E6B8B;
-					};
 				};
 			};
-			buildConfigurationList = C90292981F8D0500003E6B8B /* Build configuration list for PBXProject "Jeu Set & Match" */;
+			buildConfigurationList = C90292981F8D0500003E6B8B /* Build configuration list for PBXProject "JeuSetMatch" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,8 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C902929C1F8D0500003E6B8B /* Jeu Set & Match */,
-				C9AB60271F98EDD6008D17F1 /* Jeu Set & MatchTests */,
+				C902929C1F8D0500003E6B8B /* JeuSetMatch */,
 			);
 		};
 /* End PBXProject section */
@@ -223,13 +167,6 @@
 				C90292AB1F8D0500003E6B8B /* LaunchScreen.storyboard in Resources */,
 				C985A5E51F8F7AD200DBC442 /* Assets.xcassets in Resources */,
 				C90292A61F8D0500003E6B8B /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9AB60261F98EDD6008D17F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,23 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9AB60241F98EDD6008D17F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9F338881F98EEE300693152 /* GameTestCase.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C9AB602E1F98EDD6008D17F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C902929C1F8D0500003E6B8B /* Jeu Set & Match */;
-			targetProxy = C9AB602D1F98EDD6008D17F1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C90292A41F8D0500003E6B8B /* Main.storyboard */ = {
@@ -399,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76QL65N5BA;
-				INFOPLIST_FILE = "$(SRCROOT)/Jeu Set & Match/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/JeuSetMatch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.JeuSetMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,7 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76QL65N5BA;
-				INFOPLIST_FILE = "$(SRCROOT)/Jeu Set & Match/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/JeuSetMatch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.JeuSetMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,40 +344,10 @@
 			};
 			name = Release;
 		};
-		C9AB602F1F98EDD6008D17F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Jeu Set & MatchTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.openclassrooms.Jeu-Set---MatchTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeu Set & Match.app/Jeu Set & Match";
-			};
-			name = Debug;
-		};
-		C9AB60301F98EDD6008D17F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Jeu Set & MatchTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.openclassrooms.Jeu-Set---MatchTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeu Set & Match.app/Jeu Set & Match";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C90292981F8D0500003E6B8B /* Build configuration list for PBXProject "Jeu Set & Match" */ = {
+		C90292981F8D0500003E6B8B /* Build configuration list for PBXProject "JeuSetMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C90292AD1F8D0500003E6B8B /* Debug */,
@@ -465,20 +356,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C90292AF1F8D0500003E6B8B /* Build configuration list for PBXNativeTarget "Jeu Set & Match" */ = {
+		C90292AF1F8D0500003E6B8B /* Build configuration list for PBXNativeTarget "JeuSetMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C90292B01F8D0500003E6B8B /* Debug */,
 				C90292B11F8D0500003E6B8B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9AB60311F98EDD6008D17F1 /* Build configuration list for PBXNativeTarget "Jeu Set & MatchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9AB602F1F98EDD6008D17F1 /* Debug */,
-				C9AB60301F98EDD6008D17F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

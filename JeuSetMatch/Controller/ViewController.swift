@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var player1GameScoreLabel: UILabel!
     @IBOutlet weak var player2GameScoreLabel: UILabel!
-    lazy var playerGameScoreLabels = [Player.one: player1GameScoreLabel, Player.two: player2GameScoreLabel]
+    lazy var playerGameScoreLabels: [Player: UILabel] = [Player.one: player1GameScoreLabel, Player.two: player2GameScoreLabel]
 
     @IBOutlet weak var infoLabel: UILabel!
 
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     }
 
     private func updateMatchScore(forPlayer player: Player) {
-        for i in 0..<5 {
+        for i in 0..<6 {
             if i < match.sets.count {
                 let set = match.sets[i]
                 playerSetScoreLabels[player]![i].text = "\(set.scores[player]!)"
@@ -74,9 +74,7 @@ class ViewController: UIViewController {
 
     private func updateGameScore(forPlayer player: Player) {
         let gameScore = match.currentGame.scores[player]
-        playerGameScoreLabels[player]!!.text = gameScore.map { (points) -> String in
-            return "\(points.rawValue)"
-        }
+        playerGameScoreLabels[player]!.text = "\(gameScore!)"
     }
 
     private func updateInfoUI() {

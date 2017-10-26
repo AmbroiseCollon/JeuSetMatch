@@ -24,13 +24,16 @@ class Set {
         return getScores()
     }
 
+    static let maxNumberOfWonGames = 6
+
     // MARK: - Private Getters
     private func getWinner() -> Player? {
-        if scores[.one] == 6 {
-            return .one
-        } else if scores[.two] == 6 {
-            return .two
+        for (player, score) in scores {
+            if score == Set.maxNumberOfWonGames {
+                return player
+            }
         }
+
         return nil
     }
 
