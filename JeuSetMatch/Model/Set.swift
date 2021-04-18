@@ -28,10 +28,8 @@ class Set {
 
     // MARK: - Private Getters
     private func getWinner() -> Player? {
-        for (player, score) in scores {
-            if score == Set.maxNumberOfWonGames {
+        for (player, score) in scores where score == Set.maxNumberOfWonGames {
                 return player
-            }
         }
 
         return nil
