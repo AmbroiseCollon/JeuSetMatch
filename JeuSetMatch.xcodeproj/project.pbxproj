@@ -10,6 +10,7 @@
 		4A6215B8262C8688007747AA /* GameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6215B7262C8688007747AA /* GameTestCase.swift */; };
 		4A6215BC262C8780007747AA /* SetTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6215BB262C8780007747AA /* SetTestCase.swift */; };
 		4A6215C0262C8797007747AA /* MatchTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6215BF262C8797007747AA /* MatchTestCase.swift */; };
+		4A6215CA2634DCF9007747AA /* TieBreakGameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6215C92634DCF9007747AA /* TieBreakGameTestCase.swift */; };
 		C90292A11F8D0500003E6B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90292A01F8D0500003E6B8B /* AppDelegate.swift */; };
 		C90292A31F8D0500003E6B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90292A21F8D0500003E6B8B /* ViewController.swift */; };
 		C90292A61F8D0500003E6B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90292A41F8D0500003E6B8B /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		4A6215B7262C8688007747AA /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
 		4A6215BB262C8780007747AA /* SetTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestCase.swift; sourceTree = "<group>"; };
 		4A6215BF262C8797007747AA /* MatchTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTestCase.swift; sourceTree = "<group>"; };
+		4A6215C92634DCF9007747AA /* TieBreakGameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieBreakGameTestCase.swift; sourceTree = "<group>"; };
 		C902929D1F8D0500003E6B8B /* JeuSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeuSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90292A01F8D0500003E6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C90292A21F8D0500003E6B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				4A6215B7262C8688007747AA /* GameTestCase.swift */,
 				4A6215BB262C8780007747AA /* SetTestCase.swift */,
 				4A6215BF262C8797007747AA /* MatchTestCase.swift */,
+				4A6215C92634DCF9007747AA /* TieBreakGameTestCase.swift */,
 			);
 			path = JeuSetMatchTests;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				4A6215C0262C8797007747AA /* MatchTestCase.swift in Sources */,
 				4A6215BC262C8780007747AA /* SetTestCase.swift in Sources */,
+				4A6215CA2634DCF9007747AA /* TieBreakGameTestCase.swift in Sources */,
 				4A6215B8262C8688007747AA /* GameTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

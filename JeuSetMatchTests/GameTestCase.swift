@@ -21,6 +21,10 @@ class GameTestCase: XCTestCase {
         game.scores[.one] = score
     }
 
+    func setPlayerTwoScore (_ score: Int) {
+        game.scores[.two] = score
+    }
+
     func testGivenScoreIsNull_WhenIncrementingPlayer1Score_ThenScoreShouldBeFifteen() {
 
         game.incrementScore(forPlayer: .one)

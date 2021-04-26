@@ -26,9 +26,18 @@ class Set {
 
     static let maxNumberOfWonGames = 6
 
+    var shouldGoToTieBreak: Bool {
+        return scores[.one] == Set.maxNumberOfWonGames && scores[.two] == Set.maxNumberOfWonGames
+    }
+
+    private var isTwoPointsAhead: Bool {
+        return abs(scores[.one]! - scores[.two]!) >= 2
+    }
+
     // MARK: - Private Getters
     private func getWinner() -> Player? {
-        for (player, score) in scores where score == Set.maxNumberOfWonGames {
+        for (player, score) in scores where (score == Set.maxNumberOfWonGames && isTwoPointsAhead)
+            || score == Set.maxNumberOfWonGames + 1 {
                 return player
         }
 

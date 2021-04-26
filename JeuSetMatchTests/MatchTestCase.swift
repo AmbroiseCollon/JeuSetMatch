@@ -71,4 +71,15 @@ class MatchTestCase: XCTestCase {
         XCTAssertTrue(match.isOver)
         XCTAssertEqual(match.winner, .one)
     }
+
+    func testGivenCurrentGameScoreIsFortyAndSetScoreIs5To6_WhenPointIsAddedToPlayer1_ThenTieBreakGameIsCreated() {
+        createManyGame(5, wonBy: .one, in: match.sets.last!)
+        createManyGame(6, wonBy: .two, in: match.sets.last!)
+        match.sets.last?.games.append(Game())
+        match.currentGame.scores[.one] = 40
+
+        match.pointEnded(wonBy: .one)
+
+        XCTAssert(match.currentGame is TieBreakGame)
+    }
 }
