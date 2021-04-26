@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2GameScoreLabel: UILabel!
     lazy var playerGameScoreLabels: [Player: UILabel] = [Player.one: player1GameScoreLabel, Player.two: player2GameScoreLabel]
 
+    @IBOutlet weak var player1GameScoreAdvantageLabel: UILabel!
+    @IBOutlet weak var player2GameScoreAdvantageLabel: UILabel!
+    lazy var playerGameScoreAdvantageLabels: [Player: UILabel] = [Player.one: player1GameScoreAdvantageLabel, Player.two: player2GameScoreAdvantageLabel]
+
     @IBOutlet weak var infoLabel: UILabel!
 
     @IBOutlet weak var player1Button: UIButton!
@@ -76,6 +80,11 @@ class ViewController: UIViewController {
     private func updateGameScore(forPlayer player: Player) {
         let gameScore = match.currentGame.scores[player]
         playerGameScoreLabels[player]!.text = "\(gameScore!)"
+        if match.currentGame.advantagedPlayer == player {
+            playerGameScoreAdvantageLabels[player]!.isHidden = false
+        } else {
+            playerGameScoreAdvantageLabels[player]!.isHidden = true
+        }
     }
 
     private func updateInfoUI() {

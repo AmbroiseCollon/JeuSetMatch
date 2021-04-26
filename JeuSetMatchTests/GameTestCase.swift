@@ -59,4 +59,37 @@ class GameTestCase: XCTestCase {
         XCTAssertEqual(game.winner, .one)
         XCTAssertTrue(game.isOver)
     }
+
+    func testGivenScoreIs40To40_WhenIncrementingPlayer1Score_ThenGameIsNotOverAndThereIsAdvantageForPlayer1() {
+        setPlayerOneScore(40)
+        setPlayerTwoScore(40)
+
+        game.incrementScore(forPlayer: .one)
+
+        XCTAssertEqual(game.advantagedPlayer, .one)
+        XCTAssertNil(game.winner)
+        XCTAssertFalse(game.isOver)
+    }
+
+    func testGivenPlayer1HasAdvantage_WhenIncrementingPlayer1Score_ThenGameIsOverAndPlayer1IsWinner() {
+        setPlayerOneScore(40)
+        setPlayerTwoScore(40)
+        game.advantagedPlayer = .one
+
+        game.incrementScore(forPlayer: .one)
+
+        XCTAssertEqual(game.winner, .one)
+        XCTAssertTrue(game.isOver)
+    }
+
+    func testGivenPlayer1HasAdvantage_WhenIncrementingPlayer2Score_ThenNoOneHasAdvantage() {
+        setPlayerOneScore(40)
+        setPlayerTwoScore(40)
+        game.advantagedPlayer = .one
+
+        game.incrementScore(forPlayer: .two)
+
+        XCTAssertNil(game.advantagedPlayer)
+        XCTAssertFalse(game.isOver)
+    }
 }

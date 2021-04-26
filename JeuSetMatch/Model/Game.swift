@@ -17,19 +17,37 @@ class Game {
     // MARK: - Properties
     private static let points = [0, 15, 30, 40]
     var scores = [Player.one: 0, Player.two: 0]
+    var advantagedPlayer: Player?
     var winner: Player?
     var isOver: Bool {
         return winner != nil
     }
+    var isEquality: Bool {
+        return scores[.one] == 40 && scores[.two] == 40 && advantagedPlayer == nil
+    }
 
     // MARK: - Methods
     func incrementScore(forPlayer player: Player) {
-        if let score = scores[player], let scoreIndex = Game.points.firstIndex(of: score) {
-            if score < 40 {
-                scores[player] = Game.points[scoreIndex + 1]
-            } else {
-                end(withWinner: player)
-            }
+        if scores[player]! < 40 {
+            addPoint(toPlayer: player)
+        } else if isEquality {
+            setAdvantage(toPlayer: player)
+        } else if advantagedPlayer == player {
+            end(withWinner: player)
+        } else if advantagedPlayer != nil && advantagedPlayer != player {
+            advantagedPlayer = nil
+        } else {
+            end(withWinner: player)
+        }
+    }
+
+    private func setAdvantage(toPlayer player: Player) {
+        advantagedPlayer = player
+    }
+
+    private func addPoint(toPlayer player: Player) {
+        if let scoreIndex = Game.points.firstIndex(of: scores[player]!) {
+            scores[player] = Game.points[scoreIndex + 1]
         }
     }
 
